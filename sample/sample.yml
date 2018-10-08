@@ -1,0 +1,6 @@
+---
+ - hosts : web
+   tasks:
+        - name: ensure apache is at latest version
+          apt: name = apache2 state = latest
+...
