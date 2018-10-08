@@ -1,6 +1,8 @@
 ---
- - hosts : web
-   tasks:
-        - name: ensure apache is at latest version
-          apt: name = apache2 state = latest
-...
+- host: web
+  become : true
+  tasks:
+  - name: install list of packages
+    apt: name={items} state=installed
+    with_items:
+        -apache2
