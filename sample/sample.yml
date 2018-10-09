@@ -1,8 +1,8 @@
 ---
-- host: web
+- hosts: web
   become : true
   tasks:
   - name: install list of packages
-    apt: name={items} state=installed
+    apt: name={{items}} state=installed
     with_items:
         -apache2
