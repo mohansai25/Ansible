@@ -2,8 +2,7 @@
 - hosts : web
   become: true
   task:
-          - name : remove tasks in perticulatplc
-            apt: name= {{item}} state=absent
-            with_items:
-                    - apache2
-
+  - name :install
+   apt : name {{item}} state  = latest
+   with_items:
+        -  apache2
