@@ -1,8 +1,8 @@
 ---
 - hosts : web
   become: true
-  task:
-  - name :install
-   apt : name {{item}} state  = latest
-   with_items:
+  tasks:
+  - name: install
+    apt: name {{item}} state  = latest
+    with_items:
         -  apache2
