@@ -3,6 +3,6 @@
   become : true
   tasks:
   - name: install list of packages
-    apt: name={{items}} state=installed
+    apt: name={{item}} state=installed
     with_items:
-        -apache2
+        - apache2
