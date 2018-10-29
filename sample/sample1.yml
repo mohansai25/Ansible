@@ -1,0 +1,9 @@
+---
+- hosts: web
+  become: true
+  tasks:
+          - name: Install list of packages
+            apt: name={{item}} state =installed
+            with_items:
+                    -  apache2
+ 
