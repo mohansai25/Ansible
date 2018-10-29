@@ -1,8 +1,7 @@
 ---
 - host: web
-  name: install apache2
-  apt: name{{item}} state=installed
-  roles:
-          -nginx
-          -apache2
-          -nodejs
+  tasks:
+  - name: Install packages
+    apt: name={{item}} state=installed
+    with_items:
+            -apache2
