@@ -3,4 +3,13 @@
   tasks:
        - copy: src=/home/ubuntu/sample.txt dest=/home/ubuntu
        - command: touch /home/ubuntu/demo_dir
-         
+
+ 
+- hosts: web
+  tasks:
+          - command: rm /home/ubuntu/demo_dir 
+          - command: rm /home/ubuntu/sample.txt
+
+            #- hosts: web
+            # tasks:
+            #-command : ps -ef > process.txt
