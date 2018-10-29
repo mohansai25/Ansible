@@ -1,6 +1,6 @@
 ---
 - hosts: web
   tasks:
-       -copy: src=/home/ubuntu/sample.txt dest=/home/ubuntu
-       -command: touch /homw/ubuntu/demo_dir
+       - copy: src=/home/ubuntu/sample.txt dest=/home/ubuntu
+       - command: touch /home/ubuntu/demo_dir
          
