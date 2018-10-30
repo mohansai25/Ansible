@@ -1,0 +1,12 @@
+---
+- hosts: web
+  vars:
+          my_contacts : this is my variable section
+  tasks: 
+    - copy:
+       dest: /home/ubuntu/samp.txt
+       content: "{{my_contacts}}" 
+
+- hosts:
+        tasks:
+                - commands: cat /home/ubuntu/samp.txt
