@@ -1,0 +1,20 @@
+---
+- hosts: web
+  tasks:
+   - name:  sample with my directory1
+     command: mkdir /home/ubuntu/sai1
+
+   - name:  sample with my directory2
+     command: mkdir /home/ubuntu/sai2
+
+   - name:  sample with my directory3
+     command: mkdir /home/ubuntu/sai3
+     
+- hosts: web
+  tasks:
+  - name: this is loop directory
+    command: mkdir /home/ubuntu/"{{item}}"
+    with_items:
+    - mohansai
+    - mohansai1
+    - mohanasai2

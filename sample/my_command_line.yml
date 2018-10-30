@@ -1,0 +1,7 @@
+---
+- hosts: web
+  name: this is ansible command line variables
+  tasks:
+  - debug:
+     msg:  "this value  of val1={{val1}} and val2={{val2}}" 
+

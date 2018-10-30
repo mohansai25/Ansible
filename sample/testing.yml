@@ -10,6 +10,7 @@
           - command: rm /home/ubuntu/demo_dir 
           - command: rm /home/ubuntu/sample.txt
 
-            #- hosts: web
-            # tasks:
-            #-command : ps -ef > process.txt
+- hosts: web
+  tasks:
+          - command : touch /home/ubuntu/samp.txt
+

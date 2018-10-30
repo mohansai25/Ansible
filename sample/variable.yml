@@ -7,6 +7,6 @@
        dest: /home/ubuntu/samp.txt
        content: "{{my_contacts}}" 
 
-- hosts:
-        tasks:
-                - commands: cat /home/ubuntu/samp.txt
+- hosts:  web
+  tasks:
+          - command: cat /home/ubuntu/samp.txt

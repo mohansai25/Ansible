@@ -1,0 +1,11 @@
+---
+- name: this is  work based on the condeation you check
+  hosts: web
+  tasks:
+  - name: this will write indo based on when expression
+    copy:
+     dest: /home/ubuntu/samp.txt
+     contents: "the file is created  based "
+    when: true
+
+

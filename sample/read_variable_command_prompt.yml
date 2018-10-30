@@ -1,0 +1,11 @@
+# this program will read a variable from command line 
+---
+- name : this is play1 
+  hosts: web
+  vars_prompt:
+          name: var1
+          prompt: Enter any value?
+  tasks:
+  - name: this is debug
+    debug:
+         msg: "this value of variable is :{{var1}}"
